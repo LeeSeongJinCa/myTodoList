@@ -1,0 +1,227 @@
+body {
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+#layout {
+    display: flex;
+    width: 1519.2px;
+    margin: 0 auto;
+}
+/*! todolist 입력 */
+
+.todolist {
+    position: relative;
+    width: 1122px;
+    padding: 0 20px;
+}
+.inputTitle {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input > input {
+    height: 30px;
+    width: 700px;
+    background-color: #ebebeb;
+    border: 0;
+    padding: 10px;
+    outline: none;
+    font-size: 20px;
+}
+.add > button {
+    height: 50px;
+    width: 300px;
+    background-color: #acacac;
+    border: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+.add > button:hover {
+    background-color: #9292ff;
+}
+/*! todolist 출력  */
+.showList {
+    min-height: 620px;
+    padding: 20px;
+    border: 1px solid #c9c9c9;
+}
+.listInner {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    border: 1px solid #c9c9c9;
+    margin: 5px 0;
+}
+.listTitle {
+    width: 800px;
+    word-wrap: break-word;
+    padding: 15px 10px;
+}
+.listTitle > p {
+    word-break: break-word;
+    text-align: justify;
+}
+.listButton {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listButton > button {
+    width: 100px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0 5px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.5;
+}
+.listButton > button:hover {
+    opacity: .8;
+}
+/** focus 부분 js로 구현 */
+.active {
+    opacity: 1 !important;
+    transform: scale(1.15);
+}
+.todoButton {
+    background-color: #9292ff;
+}
+.doingButton {
+    background-color: #ffdd00;
+}
+.doneButton {
+    background-color: #58d227;
+}
+.deleteButton {
+    background-color: #ff5f5f;
+}
+/*! todo, doing, done 개수 출력 */
+.showCount {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 355px;
+}
+.showCountInner {
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 20px;
+}
+.showCountInner > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+}
+.showCountInner > div:first-child {
+    border-radius: 10px 0 0 10px;
+    width: 185px;
+}
+.showCountInner > div:last-child {
+    border-radius: 0 10px 10px 0;
+    width: 185px;
+}
+.showCountTitle {
+    color: #fff;
+}
+.showTodoTitle {
+    background-color: #9292ff;
+}
+.showDoingTitle {
+    background-color: #ffdd00;
+}
+.showDoneTitle {
+    background-color: #58d227;
+}
+.showCountText {
+    background-color: #f5f5f5;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

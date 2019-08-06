@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- http://127.0.0.1:8688/TodoList/TodoList.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>성진_TodoList-DMS</title>
+    <link rel="stylesheet" href="css/TodoList.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div id="layout">
+        
+        <div class="todolist">
+            <div class="inputTitle">
+                <div class="input">
+                    <input id="input" type="text" maxlength="230" placeholder="Input Title">
+                </div>
+                <div class="add">
+                    <button id="add">ADD</button>
+                </div>
+            </div>
+            <div id="showList" class="showList">
+                <!-- addList Start -->
+                <!-- addList End -->
+            </div>
+        </div>
+
+        <div class="showCount">
+            <div class="showTodo showCountInner">
+                <div class="showTodoTitle showCountTitle">TodoList</div>
+                <div class="showCountText">
+                    <p id="todoText">0</p>
+                </div>
+            </div>
+            <div class="showDoing showCountInner">
+                <div class="showDoingTitle showCountTitle">Doing</div>
+                <div class="showCountText">
+                    <p id="doingText">0</p>
+                </div>
+            </div>
+            <div class="showDone showCountInner">
+                <div class="showDoneTitle showCountTitle">Done</div>
+                <div class="showCountText">
+                    <p id="doneText">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/TodoList.js"></script>
+</body>
+</html>
