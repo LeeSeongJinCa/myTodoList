@@ -6,6 +6,10 @@
 * 4. axios로 서버에 값주고 받아오기? (추후 제대로)
 */
 
+window.onload = () => {
+    const input = document.getElementById('input');
+    input.focus();
+}
 /*
 *기능 1 start */
 document.getElementById('input').onkeyup = () => {
