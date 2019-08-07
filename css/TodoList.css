@@ -7,8 +7,12 @@ body {
     width: 1519.2px;
     margin: 0 auto;
 }
+#reset {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
 /*! todolist 입력 */
-
 .todolist {
     position: relative;
     width: 1122px;

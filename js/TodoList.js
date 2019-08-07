@@ -5,22 +5,30 @@
 * 3. todolist, doing, done의 개수를 출력
 * 4. axios로 서버에 값주고 받아오기? (추후 제대로)
 */
-
+let obj = {}
 window.onload = () => {
-    const input = document.getElementById('input');
+    let input = document.getElementById('input');
     input.focus();
+
+    let count = localStorage.length;
+    let showList = document.getElementById('showList');
+    for (var i = 0, j = 1; i < count; i++, j++) {
+        var listInner = document.createElement('div');
+        listInner.setAttribute('class', 'listInner');
+        listInner.innerHTML = localStorage.getItem(`list${j}`);
+        showList.appendChild(listInner);
+    }
 }
 /*
 *기능 1 start */
 document.getElementById('input').onkeyup = () => {
-    //* 키 코드 받아오는 방법
-    // https://cofs.tistory.com/12
+    //* 키 코드 받아오는 방법 -> https://cofs.tistory.com/12
     if (window.event.keyCode == 13) {
         makeList();
     }
 }
 document.getElementById('add').addEventListener('click', makeList);
-
+let lsCnt = 1;
 function makeList() {
     let listButton = document.createElement('div');
     listButton.setAttribute('class', 'listButton');
@@ -47,6 +55,7 @@ function makeList() {
     let p = document.createElement('p');
     let input = document.getElementById('input').value;
     if (input.trim() == "") {
+        document.getElementById('input').focus();
         return alert('Please input enything');
     } else {
         p.innerHTML = input;
@@ -58,10 +67,14 @@ function makeList() {
         document.getElementById('input').value = "";
         document.getElementById('input').focus();
 
+        localStorage.setItem(`list${lsCnt}`, listInner.innerHTML);
+        lsCnt++;
+
         listActive();
-        listCnt(todoButton);
+        listCnt();
     }
 }
+
 /*
 *기능 1 end */
 /*
@@ -108,9 +121,7 @@ let ordoneButton = document.getElementsByClassName('doneButton');
 var list = document.getElementsByClassName('listInner');
 let cnt1, cnt2, cnt3;
 function listCnt() {
-    cnt1 = 0;
-    cnt2 = 0;
-    cnt3 = 0;
+    cnt1 = 0, cnt2 = 0, cnt3 = 0;
     for (var i = 0; i < list.length; i++) {
         var d = ortodoButton[i].classList.value;
         var e = ordoingButton[i].classList.value;
@@ -134,7 +145,9 @@ function listCnt() {
 
 
 
-
+document.getElementById('reset').addEventListener('click', () => {
+    localStorage.clear();
+})
 
 
 
