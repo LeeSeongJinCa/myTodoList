@@ -5,20 +5,29 @@
 * 3. todolist, doing, done의 개수를 출력
 * 4. axios로 서버에 값주고 받아오기? (추후 제대로)
 */
+/*
+! locaStorage를 이용하여 리스트를 담으려 했지만 오류가 많아서 실패함
 let obj = {}
 window.onload = () => {
     let input = document.getElementById('input');
     input.focus();
 
     let count = localStorage.length;
+    console.log(count);
     let showList = document.getElementById('showList');
-    for (var i = 0, j = 1; i < count; i++, j++) {
+    for (var i = 0, j = 1; i < count; i++ , j++) {
         var listInner = document.createElement('div');
         listInner.setAttribute('class', 'listInner');
         listInner.innerHTML = localStorage.getItem(`list${j}`);
         showList.appendChild(listInner);
     }
 }
+function reseting() {
+    location.reload();
+    localStorage.clear();
+}
+document.getElementById('reset').addEventListener('click', reseting);
+*/
 /*
 *기능 1 start */
 document.getElementById('input').onkeyup = () => {
@@ -142,13 +151,6 @@ function listCnt() {
 }
 /*
 *기능 3 end */
-
-
-
-document.getElementById('reset').addEventListener('click', () => {
-    localStorage.clear();
-})
-
 
 
 
