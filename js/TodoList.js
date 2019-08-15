@@ -5,6 +5,7 @@
 * 3. todolist, doing, done의 개수를 출력
 * 4. axios로 서버에 값주고 받아오기? (추후 제대로)
 */
+
 /*
 ! locaStorage를 이용하여 리스트를 담으려 했지만 오류가 많아서 실패함
 let obj = {}
@@ -61,14 +62,14 @@ function makeList() {
     listInner.setAttribute('class', 'listInner');
     let listTitle = document.createElement('div');
     listTitle.setAttribute('class', 'listTitle');
-    let p = document.createElement('p');
+    let textarea = document.createElement('textarea');
     let input = document.getElementById('input').value;
     if (input.trim() == "") {
         document.getElementById('input').focus();
         return alert('Please input enything');
     } else {
-        p.innerHTML = input;
-        listTitle.appendChild(p);
+        textarea.innerHTML = input;
+        listTitle.appendChild(textarea);
         listInner.appendChild(listTitle);
         listInner.appendChild(listButton);
         let showList = document.getElementById('showList');
@@ -135,15 +136,9 @@ function listCnt() {
         var d = ortodoButton[i].classList.value;
         var e = ordoingButton[i].classList.value;
         var f = ordoneButton[i].classList.value;
-        if (d == 'todoButton active') {
-            cnt1 = cnt1 + 1;
-        }
-        if (e == 'doingButton active') {
-            cnt2 = cnt2 + 1;
-        }
-        if (f == 'doneButton active') {
-            cnt3 = cnt3 + 1;
-        }
+        if (d == 'todoButton active') { cnt1 = cnt1 + 1; }
+        if (e == 'doingButton active') { cnt2 = cnt2 + 1; }
+        if (f == 'doneButton active') { cnt3 = cnt3 + 1; }
     }
     document.getElementById('todoText').innerHTML = cnt1;
     document.getElementById('doingText').innerHTML = cnt2;
@@ -151,8 +146,6 @@ function listCnt() {
 }
 /*
 *기능 3 end */
-
-
 
 
 

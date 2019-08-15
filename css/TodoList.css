@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 body {
     box-sizing: border-box;
     /* overflow-x: hidden; */
@@ -56,7 +57,6 @@ body {
 .listInner {
     display: flex;
     justify-content: space-around;
-    height: 100px;
     border: 1px solid #c9c9c9;
     margin: 5px 0;
 }
@@ -65,9 +65,17 @@ body {
     word-wrap: break-word;
     padding: 15px 10px;
 }
-.listTitle > p {
-    word-break: break-word;
-    text-align: justify;
+.listTitle > textarea {
+    height: 100px;
+    width: 750px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.listTitle > textarea:focus {
+    box-shadow: 2px 2px 15px #e4e4e4;
 }
 .listButton {
     width: 300px;
@@ -95,9 +103,9 @@ body {
     opacity: 1 !important;
     transform: scale(1.15);
 }
-.listButton > button > img {
-    width: 65px;
-    height: 50px;
+.checkImg {
+    width: 30px;
+    height: 30px;
 }
 .todoButton {
     background-color: #9292ff;
